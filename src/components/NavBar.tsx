@@ -1,19 +1,18 @@
-// components/Navbar.tsx
-
 "use client";
 
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import Profile from "../../public/profileImg.png"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Avatar, AvatarImage } from "./ui/avatar";
 
 const routes = [
   {
@@ -21,11 +20,11 @@ const routes = [
     label: "Home",
   },
   {
-    href: "/about",
+    href: "#aboutMe",
     label: "About",
   },
   {
-    href: "/contact",
+    href: "#contactMe",
     label: "Contact",
   },
 ];
@@ -57,7 +56,9 @@ export default function NavBar() {
         {/* Desktop Navbar */}
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold">
-            Logo
+            <Avatar >
+              <AvatarImage src="profileImg.png" alt="profile"/> 
+            </Avatar>
           </Link>
         </div>
 

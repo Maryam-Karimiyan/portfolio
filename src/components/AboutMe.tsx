@@ -8,7 +8,7 @@ import VectorFlash from "../../public/VectorFlash.png";
 import Image from "next/image";
 function AboutMe() {
   return (
-    <div className="px-15 flex justify-center lg:justify-between items-start h-fit flex-wrap">
+    <div id="aboutMe" className="px-15 flex justify-center lg:justify-between items-start h-fit flex-wrap">
       <div>
         <Image
           src={Note}
